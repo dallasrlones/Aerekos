@@ -1,0 +1,5 @@
+In this release an HTML generator was created
+    view_mod.js
+    
+    Just finished the reading of elements that have the identify attribute,
+    adding the CRUD now that I have the elements positions

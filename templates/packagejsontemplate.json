@@ -1,0 +1,8 @@
+{
+  "name": "<^ model.name ^>",
+  "version": "<^ model.version ^>",
+  "description": "<^ model.descript ^>",
+  "main": "<^ model.mainFile ^>",
+  "author": "<^ model.author ^>",
+  "license": "<^ model.license ^>"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "<^ model.name ^>",
+  "version": "<^ model.version ^>",
+  "description": "<^ model.descript ^>",
+  "main": "<^ model.mainFile ^>",
+  "author": "<^ model.author ^>",
+  "license": "<^ model.license ^>",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3"
+  }
+}
