@@ -228,13 +228,22 @@
         fileMod.CreateFile(viewLocation, newFile);
     };
     
+    viewMod.AppendElementContents = function(elementName, viewName, folderPath, newContents){
+        var pos = GetElementProps(elementName, viewName, folderPath);
+        var app = saveMod.GetSaveFileName();
+        var viewLocation = app + "/" + folderPath + "/" + viewName + ".html";
+        var file = fileMod.ReadFile(viewLocation);
+
+        var newFile = file.slice(0 , pos.start) + pos.element + newContents + pos.elemContents + file.slice(pos.stop, file.length);
+        fileMod.CreateFile(viewLocation, newFile);
+    };
+    
     viewMod.PrependElementContents = function(elementName, viewName, folderPath, newContents){
         var pos = GetElementProps(elementName, viewName, folderPath);
         var app = saveMod.GetSaveFileName();
         var viewLocation = app + "/" + folderPath + "/" + viewName + ".html";
         var file = fileMod.ReadFile(viewLocation);
-        
-        //HERE
+
         var newFile = file.slice(0 , pos.start) + pos.element + pos.elemContents + newContents + file.slice(pos.stop, file.length);
         fileMod.CreateFile(viewLocation, newFile);
     };
